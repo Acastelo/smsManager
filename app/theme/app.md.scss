@@ -10,7 +10,14 @@
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+$toolbar-md-background:                   map-get($colors, primary) !default;
+$toolbar-md-text-color:                   #fff !default;
+$toolbar-md-active-color:                 #fff !default;
+$toolbar-md-inactive-color:               #fff !default;
+$toolbar-md-button-color:                 #fff !default;
 
+$checkbox-md-icon-checkmark-color:        #fff !default;
+$segment-button-md-text-color-activated:  #fff !default;
 
 // Ionic Material Design Sass
 // --------------------------------------------------
@@ -29,3 +36,17 @@
 // App Material Design Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the Material Design app
+.menu-item{
+	padding:20px;
+	font-size: 14px;
+	text-align: left;
+	z-index: 2;
+	font-family: RobotoDraft,Roboto,sans-serif;
+	font-weight: bold;
+}
+
+.menu-item-icon{
+	margin-right: 20px;
+}
+
+

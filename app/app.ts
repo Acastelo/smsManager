@@ -13,15 +13,17 @@ class MyApp {
 
   rootPage: any = Page1;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page uno', component: Page1 },
-      { title: 'Page dos', component: Page2 }
+      { title: 'Nova Mensagem', component: Page1, icon: 'text' },
+      { title: 'Contatos', component: Page2, icon: 'contacts'  },
+      { title: 'Agendamentos', component: Page2, icon: 'calendar'  },
+      { title: 'Sobre', component: Page2, icon: 'information-circle'  }
     ];
 
   }
