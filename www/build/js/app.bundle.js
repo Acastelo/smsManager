@@ -13,18 +13,18 @@ var core_1 = require('@angular/core');
 var ionic_angular_1 = require('ionic-angular');
 var ionic_native_1 = require('ionic-native');
 var page1_1 = require('./pages/page1/page1');
-var page2_1 = require('./pages/page2/page2');
+var contatos_1 = require('./pages/contatos/contatos');
 var MyApp = (function () {
     function MyApp(platform) {
         this.platform = platform;
-        this.rootPage = page1_1.Page1;
+        this.rootPage = contatos_1.Contatos;
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
             { title: 'Nova Mensagem', component: page1_1.Page1, icon: 'text' },
-            { title: 'Contatos', component: page2_1.Page2, icon: 'contacts' },
-            { title: 'Agendamentos', component: page2_1.Page2, icon: 'calendar' },
-            { title: 'Sobre', component: page2_1.Page2, icon: 'information-circle' }
+            { title: 'Contatos', component: contatos_1.Contatos, icon: 'contacts' },
+            { title: 'Agendamentos', component: contatos_1.Contatos, icon: 'calendar' },
+            { title: 'Sobre', component: contatos_1.Contatos, icon: 'information-circle' }
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -52,7 +52,47 @@ var MyApp = (function () {
     return MyApp;
 }());
 ionic_angular_1.ionicBootstrap(MyApp);
-},{"./pages/page1/page1":2,"./pages/page2/page2":3,"@angular/core":151,"ionic-angular":465,"ionic-native":492}],2:[function(require,module,exports){
+},{"./pages/contatos/contatos":2,"./pages/page1/page1":3,"@angular/core":151,"ionic-angular":465,"ionic-native":492}],2:[function(require,module,exports){
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require('@angular/core');
+var ionic_angular_1 = require('ionic-angular');
+var Contatos = (function () {
+    function Contatos(navCtrl) {
+        this.navCtrl = navCtrl;
+        this.contacts = [
+            { name: 'Fulano', icon: 'img/girl_1.png' },
+            { name: 'Cicrano', icon: 'img/girl_2.png' },
+            { name: 'Beltrano', icon: 'img/girl_3.png' },
+            { name: 'Don Vandin', icon: 'img/girl_1.png' },
+            { name: 'Fulano', icon: 'img/girl_1.png' },
+            { name: 'Cicrano', icon: 'img/girl_2.png' },
+            { name: 'Beltrano', icon: 'img/girl_3.png' },
+            { name: 'Don Vandin', icon: 'img/girl_1.png' },
+            { name: 'Fulano', icon: 'img/girl_1.png' },
+            { name: 'Cicrano', icon: 'img/girl_2.png' },
+            { name: 'Beltrano', icon: 'img/girl_3.png' },
+            { name: 'Don Vandin', icon: 'img/girl_1.png' }
+        ];
+    }
+    Contatos = __decorate([
+        core_1.Component({
+            templateUrl: 'build/pages/contatos/contatos.html'
+        }), 
+        __metadata('design:paramtypes', [ionic_angular_1.NavController])
+    ], Contatos);
+    return Contatos;
+}());
+exports.Contatos = Contatos;
+},{"@angular/core":151,"ionic-angular":465}],3:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -78,51 +118,6 @@ var Page1 = (function () {
     return Page1;
 }());
 exports.Page1 = Page1;
-},{"@angular/core":151,"ionic-angular":465}],3:[function(require,module,exports){
-"use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var core_1 = require('@angular/core');
-var ionic_angular_1 = require('ionic-angular');
-var Page2 = (function () {
-    function Page2(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        // If we navigated to this page, we will have an item available as a nav param
-        this.selectedItem = navParams.get('item');
-        // Let's populate this page with some filler content for funzies
-        this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-            'american-football', 'boat', 'bluetooth', 'build'];
-        this.items = [];
-        for (var i = 1; i < 11; i++) {
-            this.items.push({
-                title: 'Item ' + i,
-                note: 'This is item #' + i,
-                icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-            });
-        }
-    }
-    Page2.prototype.itemTapped = function (event, item) {
-        // That's right, we're pushing to ourselves!
-        this.navCtrl.push(Page2, {
-            item: item
-        });
-    };
-    Page2 = __decorate([
-        core_1.Component({
-            templateUrl: 'build/pages/page2/page2.html'
-        }), 
-        __metadata('design:paramtypes', [ionic_angular_1.NavController, ionic_angular_1.NavParams])
-    ], Page2);
-    return Page2;
-}());
-exports.Page2 = Page2;
 },{"@angular/core":151,"ionic-angular":465}],4:[function(require,module,exports){
 /**
  * @license

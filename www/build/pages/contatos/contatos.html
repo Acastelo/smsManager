@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contatos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-searchbar
+	  [(ngModel)]="myInput"
+	  [showCancelButton]="shouldShowCancel"
+	  (ionInput)="onInput($event)"
+	  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+	 <ion-list>
+	  <ion-item *ngFor="let c of contacts">
+	  	<ion-avatar item-left>
+	    	<img src="{{c.icon}}">
+	    </ion-avatar>
+	    <ion-label>{{c.name}}</ion-label>
+	    <ion-note item-right>9 9999-0000</ion-note>
+	    <ion-toggle checked="true"></ion-toggle>
+	  </ion-item>
+	</ion-list>
+</ion-content>

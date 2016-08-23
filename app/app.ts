@@ -4,6 +4,8 @@ import { StatusBar } from 'ionic-native';
 
 import { Page1 } from './pages/page1/page1';
 import { Page2 } from './pages/page2/page2';
+import { Contatos } from './pages/contatos/contatos';
+
 
 @Component({
   templateUrl: 'build/app.html'
@@ -11,7 +13,7 @@ import { Page2 } from './pages/page2/page2';
 class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = Contatos;
 
   pages: Array<{title: string, component: any, icon: string}>;
 
@@ -21,9 +23,9 @@ class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Nova Mensagem', component: Page1, icon: 'text' },
-      { title: 'Contatos', component: Page2, icon: 'contacts'  },
-      { title: 'Agendamentos', component: Page2, icon: 'calendar'  },
-      { title: 'Sobre', component: Page2, icon: 'information-circle'  }
+      { title: 'Contatos', component: Contatos, icon: 'contacts'  },
+      { title: 'Agendamentos', component: Contatos, icon: 'calendar'  },
+      { title: 'Sobre', component: Contatos, icon: 'information-circle'  }
     ];
 
   }
