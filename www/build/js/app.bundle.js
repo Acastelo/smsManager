@@ -52,6 +52,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 ionic_angular_1.ionicBootstrap(MyApp);
+
 },{"./pages/contatos/contatos":2,"./pages/page1/page1":3,"@angular/core":151,"ionic-angular":465,"ionic-native":492}],2:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -65,23 +66,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var ionic_angular_1 = require('ionic-angular');
+var ionic_native_1 = require('ionic-native');
 var Contatos = (function () {
     function Contatos(navCtrl) {
+        var _this = this;
         this.navCtrl = navCtrl;
-        this.contacts = [
-            { name: 'Fulano', icon: 'img/girl_1.png' },
-            { name: 'Cicrano', icon: 'img/girl_2.png' },
-            { name: 'Beltrano', icon: 'img/girl_3.png' },
-            { name: 'Don Vandin', icon: 'img/girl_1.png' },
-            { name: 'Fulano', icon: 'img/girl_1.png' },
-            { name: 'Cicrano', icon: 'img/girl_2.png' },
-            { name: 'Beltrano', icon: 'img/girl_3.png' },
-            { name: 'Don Vandin', icon: 'img/girl_1.png' },
-            { name: 'Fulano', icon: 'img/girl_1.png' },
-            { name: 'Cicrano', icon: 'img/girl_2.png' },
-            { name: 'Beltrano', icon: 'img/girl_3.png' },
-            { name: 'Don Vandin', icon: 'img/girl_1.png' }
-        ];
+        this.contacts = [];
+        var opts = {
+            hasPhoneNumber: true,
+            multiple: true,
+            fields: ['displayName', 'name', 'phoneNumber'],
+        };
+        ionic_native_1.Contacts.find(opts.fields, opts).then(function (contacts) {
+            _this.contacts = contacts;
+            //alert(contacts[0].phoneNumber);
+            alert(JSON.stringify(contacts[1]));
+        });
     }
     Contatos = __decorate([
         core_1.Component({
@@ -92,7 +92,8 @@ var Contatos = (function () {
     return Contatos;
 }());
 exports.Contatos = Contatos;
-},{"@angular/core":151,"ionic-angular":465}],3:[function(require,module,exports){
+
+},{"@angular/core":151,"ionic-angular":465,"ionic-native":492}],3:[function(require,module,exports){
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -118,6 +119,7 @@ var Page1 = (function () {
     return Page1;
 }());
 exports.Page1 = Page1;
+
 },{"@angular/core":151,"ionic-angular":465}],4:[function(require,module,exports){
 /**
  * @license

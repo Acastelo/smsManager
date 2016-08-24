@@ -14,13 +14,10 @@
 	  (ionInput)="onInput($event)"
 	  (ionCancel)="onCancel($event)">
 </ion-searchbar>
-	 <ion-list>
+	 <ion-list no-lines>
 	  <ion-item *ngFor="let c of contacts">
-	  	<ion-avatar item-left>
-	    	<img src="{{c.icon}}">
-	    </ion-avatar>
-	    <ion-label>{{c.name}}</ion-label>
-	    <ion-note item-right>9 9999-0000</ion-note>
+	    <ion-label>{{c.displayName}}</ion-label>
+	    <ion-note item-right>{{c.phoneNumbers[0].value}}</ion-note>
 	    <ion-toggle checked="true"></ion-toggle>
 	  </ion-item>
 	</ion-list>
