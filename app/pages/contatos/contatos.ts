@@ -39,5 +39,5 @@ export class Contatos {
           alert(JSON.stringify(contacts[1]));
       });
   }
-  
+
 }
