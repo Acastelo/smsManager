@@ -15,7 +15,8 @@ import { ionicBootstrap } from 'ionic-angular';
 export class Agendamentos{
 
   tabEnviadas: TabEnviadas;
-  tabAgendadas:TabAgendadas;
+  tabAgendadas: TabAgendadas;
+
   constructor(public navCtrl: NavController) {
         this.tabEnviadas = TabEnviadas;
         this.tabAgendadas = TabAgendadas;
@@ -26,9 +27,9 @@ export class Agendamentos{
 @Component({
   templateUrl: 'build/pages/agendamentos/TabEnviadas.html'
 })
-export class TabEnviadas {}
+export class TabEnviadas { }
 
 @Component({
   templateUrl: 'build/pages/agendamentos/tabsAgendadas.html'
 })
-export class TabAgendadas {}
+export class TabAgendadas   {}
