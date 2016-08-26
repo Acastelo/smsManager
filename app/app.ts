@@ -23,11 +23,11 @@ class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Nova Mensagem', component: Page1, icon: 'text' },
+
+      { title: 'Nova Mensagem', component: Page1, icon: 'chatboxes' },
       { title: 'Contatos', component: Contatos, icon: 'contacts'  },
       { title: 'Agendamentos', component: Agendamentos, icon: 'calendar'  },
       { title: 'Sobre', component: Page1, icon: 'information-circle'  }
-    ];
 
   }
 

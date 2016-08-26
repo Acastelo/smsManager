@@ -53225,7 +53225,7 @@ exports.DATETIME_VALUE_ACCESSOR = new core_1.Provider(forms_1.NG_VALUE_ACCESSOR,
  *
  * ```html
  * <ion-item>
- *   <ion-label>PerÃ­odo</ion-label>
+ *   <ion-label>Período</ion-label>
  *   <ion-datetime displayFormat="DDDD MMM D, YYYY" [(ngModel)]="myDate"
  *     monthNames="janeiro, fevereiro, mar\u00e7o, ..."
  *     monthShortNames="jan, fev, mar, ..."
@@ -69745,7 +69745,7 @@ function Swiper(container, params) {
                   i1 = i3 - 1;
 
                   // We have our indexes i1 & i3, so we can calculate already:
-                  // y2 := ((x2âˆ’x1) Ã— (y3âˆ’y1)) Ã· (x3âˆ’x1) + y1
+                  // y2 := ((x2-x1) × (y3-y1)) ÷ (x3-x1) + y1
                   return ((x2 - this.x[i1]) * (this.y[i3] - this.y[i1])) / (this.x[i3] - this.x[i1]) + this.y[i1];
               };
 
@@ -71238,12 +71238,12 @@ var config_1 = require('../../config/config');
  * @description
  * The `ion-spinner` component provides a variety of animated SVG spinners.
  * Spinners enables you to give users feedback that the app is actively
- * processing/thinking/waiting/chillinâ€™ out, or whatever youâ€™d like it to indicate.
+ * processing/thinking/waiting/chillin’ out, or whatever you’d like it to indicate.
  * By default, the `ion-refresher` feature uses this spinner component while it's
  * the refresher is in the `refreshing` state.
  *
  * Ionic offers a handful of spinners out of the box, and by default, it will use
- * the appropriate spinner for the platform on which itâ€™s running.
+ * the appropriate spinner for the platform on which it’s running.
  *
  * <table class="table spinner-table">
  *  <tr>
@@ -83799,7 +83799,7 @@ var plugin_1 = require('./plugin');
 /**
  * @name Badge
  * @description
- * The essential purpose of badge numbers is to enable an application to inform its users that it has something for them â€” for example, unread messages â€” when the application isnâ€™t running in the foreground.
+ * The essential purpose of badge numbers is to enable an application to inform its users that it has something for them — for example, unread messages — when the application isn’t running in the foreground.
  *
  * Requires Cordova plugin: cordova-plugin-badge. For more info, please see the [Badge plugin docs](https://github.com/katzer/cordova-plugin-badge).
  *
