@@ -21,7 +21,7 @@ var MyApp = (function () {
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
-            { title: 'Nova Mensagem', component: page1_1.Page1, icon: 'text' },
+            { title: 'Nova Mensagem', component: page1_1.Page1, icon: 'chatboxes' },
             { title: 'Contatos', component: page2_1.Page2, icon: 'contacts' },
             { title: 'Agendamentos', component: page2_1.Page2, icon: 'calendar' },
             { title: 'Sobre', component: page2_1.Page2, icon: 'information-circle' }
@@ -68,6 +68,7 @@ var ionic_angular_1 = require('ionic-angular');
 var Page1 = (function () {
     function Page1(navCtrl) {
         this.navCtrl = navCtrl;
+        this.labelEnviar = "Enviar";
     }
     Page1 = __decorate([
         core_1.Component({

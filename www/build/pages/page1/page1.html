@@ -10,26 +10,18 @@
 
 <ion-content padding class="page1">
 
-  <ion-card id="card" class="card-background">
+  <ion-card>
     <ion-item>
-      <ion-icon favorite name="text"></ion-icon>
+      <ion-icon favorite name="chatboxes"></ion-icon>
       <span>Compor Mensagem</span>
     </ion-item>
-  </ion-card>
 
-  <ion-card>
     <ion-card-content>
-      <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur
-      </span>
+      <ion-textarea rows="10" placeholder="Escreva sua mensagem aqui">
+      </ion-textarea>
     </ion-card-content>
   </ion-card>
 
-  <button full dark>Enviar Agora</button>
-  <button full dark>Agendar Mensagem</button>
+  <button full dark>{{labelEnviar}}</button>
 
 </ion-content>
