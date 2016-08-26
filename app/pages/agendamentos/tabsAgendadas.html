@@ -7,5 +7,10 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+  <ion-list no-lines>
+    <ion-item *ngFor="let message of mensagensAgendadas">
+      <ion-icon name='leaf' item-left></ion-icon>
+      {{message.text}}
+      <ion-note item-right> {{message.date}}</ion-note>
+    </ion-item>
 </ion-content>

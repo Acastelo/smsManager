@@ -7,5 +7,10 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-  "Lorem ipsum dolor sit amet,
+  <ion-list no-lines>
+    <ion-item *ngFor="let message of mensagensEnviadas">
+      <ion-icon name='leaf' item-left></ion-icon>
+      {{message.text}}
+      <ion-note item-right> {{message.date}}</ion-note>
+    </ion-item>
 </ion-content>

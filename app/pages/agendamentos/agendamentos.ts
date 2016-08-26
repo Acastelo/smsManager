@@ -7,19 +7,19 @@ import { ionicBootstrap } from 'ionic-angular';
 @Component({
   template: `
     <ion-tabs>
-    <ion-tab tabIcon="paper-plane" tabTitle="Enviadas" [root]="tabEnviadas"></ion-tab>
-    <ion-tab tabIcon="time" tabTitle="Agendadas" [root]="tabAgendadas"></ion-tab>
+    <ion-tab tabIcon="paper-plane" tabTitle="Enviadas" [root]="{{tabEnviadas}}"></ion-tab>
+    <ion-tab tabIcon="time" tabTitle="Agendadas" [root]="{{tabAgendadas}}"></ion-tab>
   </ion-tabs>`
 })
 
 export class Agendamentos{
 
-  tabEnviadas: TabEnviadas;
-  tabAgendadas: TabAgendadas;
+  private tabEnviadas: TabEnviadas;
+  private tabAgendadas: TabAgendadas;
 
   constructor(public navCtrl: NavController) {
-        this.tabEnviadas = TabEnviadas;
-        this.tabAgendadas = TabAgendadas;
+        this.tabEnviadas = new TabEnviadas(navCtrl);
+        this.tabAgendadas = new TabAgendadas(navCtrl);
   }
 }
 
@@ -27,9 +27,33 @@ export class Agendamentos{
 @Component({
   templateUrl: 'build/pages/agendamentos/TabEnviadas.html'
 })
-export class TabEnviadas { }
+export class TabEnviadas {
+  private  mensagensEnviadas : Array<{text: string, date: string}>;
+
+  constructor(public navCtrl: NavController){
+    this.mensagensEnviadas = [
+      {text:'Lorem ipsum dolor sit amet', date:'20-05-2016'},
+      {text:'Lorem ipsum dolor sit amet', date:'20-05-2016'},
+      {text:'Lorem ipsum dolor sit amet', date:'20-05-2016'},
+      {text:'Lorem ipsum dolor sit amet', date:'20-05-2016'},
+      {text:'Lorem ipsum dolor sit amet', date:'20-05-2016'}
+    ];
+  }
+}
 
 @Component({
   templateUrl: 'build/pages/agendamentos/tabsAgendadas.html'
 })
-export class TabAgendadas   {}
+export class TabAgendadas   {
+  private mensagensAgendadas : Array<{text: string, date: string}>;
+
+  constructor(public navCtrl: NavController){
+    this.mensagensAgendadas = [
+      {text:'Praesent sodales mauris eu elit.', date:'20-05-2016'},
+      {text:'Praesent sodales mauris eu elit.', date:'20-05-2016'},
+      {text:'Praesent sodales mauris eu elit.', date:'20-05-2016'},
+      {text:'Praesent sodales mauris eu elit.', date:'20-05-2016'},
+      {text:'Praesent sodales mauris eu elit.', date:'20-05-2016'}
+    ];
+  }
+}
