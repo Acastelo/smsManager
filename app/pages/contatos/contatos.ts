@@ -31,6 +31,7 @@ export class Contatos {
       });
   }
 
+
   initializeList(){
   	this.contactsToShow = this.contacts;
   }
