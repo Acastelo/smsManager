@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Envios</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list no-lines>
+    <ion-item *ngFor="let message of mensagensEnviadas">
+      <ion-icon name='checkmark-circle' item-left></ion-icon>
+      <span class="tab-list-item">{{message.text}}</span>
+      <ion-note item-right> {{message.date}}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>
