@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Agendamentos</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list no-lines>
+    <ion-item *ngFor="let message of mensagensAgendadas">
+      <ion-icon name='leaf' item-left></ion-icon>
+      {{message.text}}
+      <ion-note item-right> {{message.date}}</ion-note>
+    </ion-item>
+</ion-content>

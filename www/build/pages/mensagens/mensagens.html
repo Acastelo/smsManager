@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar class="bar bar-acendent">
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Nova Mensagem</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="mensagens">
+
+  <ion-card>
+    <ion-item>
+      <ion-icon favorite name="chatboxes"></ion-icon>
+      <span>Compor Mensagem</span>
+    </ion-item>
+
+    <ion-textarea rows="10" placeholder="Digite sua mensagem aqui...">
+    </ion-textarea>
+  </ion-card>
+  <ion-item>
+    <ion-label>Data de Agendamento</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" (ionChange)="mudarBotao()"></ion-datetime>
+  </ion-item>
+  <button full dark >{{ msnLabel }}</button>
+
+</ion-content>
