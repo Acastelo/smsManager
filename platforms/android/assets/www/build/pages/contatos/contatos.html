@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contatos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-searchbar  
+		[showCancelButton]="shouldShowCancel"  
+		(ionInput)="onInput($event)">
+	</ion-searchbar>
+	 <ion-list no-lines>
+	  <ion-item *ngFor="let c of contactsToShow">
+	    <ion-label>{{c.displayName}}</ion-label>
+	    <ion-note item-right>{{c.phoneNumbers[0].value}}</ion-note>
+	    <ion-toggle checked="true"></ion-toggle>
+	  </ion-item>
+	</ion-list>
+</ion-content>
