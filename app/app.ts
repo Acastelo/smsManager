@@ -6,6 +6,7 @@ import { Page1 } from './pages/page1/page1';
 import { Page2 } from './pages/page2/page2';
 import { Contatos } from './pages/contatos/contatos';
 import { Agendamentos } from './pages/agendamentos/agendamentos';
+import { Sobre } from './pages/sobre/sobre';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { Agendamentos } from './pages/agendamentos/agendamentos';
 class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Contatos;
+  rootPage: any = Sobre;
 
   pages: Array<{title: string, component: any, icon: string}>;
 
@@ -26,7 +27,7 @@ class MyApp {
       { title: 'Nova Mensagem', component: Page1, icon: 'text' },
       { title: 'Contatos', component: Contatos, icon: 'contacts'  },
       { title: 'Agendamentos', component: Agendamentos, icon: 'calendar'  },
-      { title: 'Sobre', component: Page1, icon: 'information-circle'  }
+      { title: 'Sobre', component: Sobre, icon: 'information-circle'  }
     ];
 
   }
