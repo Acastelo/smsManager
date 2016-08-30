@@ -27,9 +27,8 @@ class MyApp {
       { title: 'Nova Mensagem', component: Page1, icon: 'chatboxes' },
       { title: 'Contatos', component: Contatos, icon: 'contacts'  },
       { title: 'Agendamentos', component: Agendamentos, icon: 'calendar'  },
-      { title: 'Sobre', component: Page1, icon: 'information-circle'  }
-
-  }
+      { title: 'Sobre', component: Page1, icon: 'information-circle'  },
+  ]}
 
   initializeApp() {
     this.platform.ready().then(() => {
