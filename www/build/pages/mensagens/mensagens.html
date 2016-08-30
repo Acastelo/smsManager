@@ -16,13 +16,15 @@
       <span>Compor Mensagem</span>
     </ion-item>
 
-    <ion-textarea rows="10" placeholder="Digite sua mensagem aqui...">
-    </ion-textarea>
+    <ion-card-content>
+      <ion-textarea rows="10" placeholder="Escreva sua mensagem aqui...">
+      </ion-textarea>
+    </ion-card-content>
   </ion-card>
   <ion-item>
-    <ion-label>Data de Agendamento</ion-label>
+    <ion-label>Data Agendamento</ion-label>
     <ion-datetime displayFormat="DD/MM/YYYY" (ionChange)="mudarBotao()"></ion-datetime>
   </ion-item>
-  <button full dark >{{ msnLabel }}</button>
+  <button full dark>{{labelEnviar}}</button>
 
 </ion-content>

@@ -1,35 +1,23 @@
 <ion-header>
-  <ion-navbar class="bar bar-acendent">
+  <ion-navbar>
     <button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Nova Mensagem</ion-title>
+    <ion-title>Sobre</ion-title>
   </ion-navbar>
 </ion-header>
 
-
-<ion-content padding class="page1">
-
-  <ion-card id="card" class="card-background">
-    <ion-item>
-      <ion-icon favorite name="text"></ion-icon>
-      <span>Compor Mensagem</span>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-content>
-      <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur
-      </span>
-    </ion-card-content>
-  </ion-card>
-
-  <button full dark>Enviar Agora</button>
-  <button full dark>Agendar Mensagem</button>
-
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-icon [name]="item.icon" item-left></ion-icon>
+      {{item.title}}
+      <div class="item-note" item-right>
+        {{item.note}}
+      </div>
+    </button>
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
 </ion-content>

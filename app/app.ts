@@ -2,8 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { ionicBootstrap, Platform, Nav } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
-import { Page1 } from './pages/page1/page1';
-import { Page2 } from './pages/page2/page2';
+import { Mensagem } from './pages/mensagens/mensagens';
+import { Sobre } from './pages/sobre/sobre';
 import { Contatos } from './pages/contatos/contatos';
 import { Agendamentos } from './pages/agendamentos/agendamentos';
 
@@ -24,10 +24,10 @@ class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
 
-      { title: 'Nova Mensagem', component: Page1, icon: 'chatboxes' },
+      { title: 'Nova Mensagem', component: Mensagem, icon: 'chatboxes' },
       { title: 'Contatos', component: Contatos, icon: 'contacts'  },
       { title: 'Agendamentos', component: Agendamentos, icon: 'calendar'  },
-      { title: 'Sobre', component: Page1, icon: 'information-circle'  },
+      { title: 'Sobre', component: Sobre, icon: 'information-circle'  },
   ]}
 
   initializeApp() {

@@ -6,7 +6,11 @@
     <ion-title>Agendamentos</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
-    Alguma coisa na aba 1
-<ion-content>
+  <ion-list no-lines>
+    <ion-item *ngFor="let message of mensagensAgendadas">
+      <ion-icon name='leaf' item-left></ion-icon>
+      {{message.text}}
+      <ion-note item-right> {{message.date}}</ion-note>
+    </ion-item>
+</ion-content>
