@@ -6,6 +6,7 @@ import { Mensagem } from './pages/mensagens/mensagens';
 import { Sobre } from './pages/sobre/sobre';
 import { Contatos } from './pages/contatos/contatos';
 import { Agendamentos } from './pages/agendamentos/agendamentos';
+import { Sobre } from './pages/sobre/sobre';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { Agendamentos } from './pages/agendamentos/agendamentos';
 class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Contatos;
+  rootPage: any = Sobre;
 
   pages: Array<{title: string, component: any, icon: string}>;
 
@@ -27,8 +28,15 @@ class MyApp {
       { title: 'Nova Mensagem', component: Mensagem, icon: 'chatboxes' },
       { title: 'Contatos', component: Contatos, icon: 'contacts'  },
       { title: 'Agendamentos', component: Agendamentos, icon: 'calendar'  },
+<<<<<<< HEAD
       { title: 'Sobre', component: Sobre, icon: 'information-circle'  },
   ]}
+=======
+      { title: 'Sobre', component: Sobre, icon: 'information-circle'  }
+    ];
+
+  }
+>>>>>>> 7af7dc25bdfabbfb8a60bad9b81c96fc212318a7
 
   initializeApp() {
     this.platform.ready().then(() => {

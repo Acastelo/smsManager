@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sobre</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="img/sms_icon.png">
+    </ion-avatar>
+    <h2>smsManager</h2>
+    <h3>Gerenciador de sms em massa.</h3>
+    <p>Versão 0.1</p>
+    <p> © Todos os direitos reservados. </p>
+  </ion-item>
+
+<!-- Alexandre Space-->
+	<ion-card>
+    <span class="card-header">
+      <img class="img-circle" src='img/alexandre.jpg'>
+    </span>
+    <ion-card-content>
+      <h2 class="card-title center-title">Alexandre Castelo Branco</h2>
+    	<p>
+    	   	Analista de sistemas.<br/>
+          Esp. em desnvolvimento de aplicações Java.<br/>
+          Mestrando em Engenharia de Software<br/>
+      <p>
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name='mail' item-left></ion-icon>
+      funny.alexandre@gmail.com
+    </ion-item>
+    <ion-item>
+      <ion-icon name='logo-facebook' item-left style="color: #3b5998"></ion-icon>
+      luizalexandre.castelobrancogomes
+    </ion-item>
+    <ion-item>
+      <ion-icon name='logo-linkedin' item-left style="color: #0077b5"></ion-icon>
+      Luiz Alexandre
+    </ion-item>
+  </ion-card>
+
+
+<!-- Maikon Space-->
+    <ion-card>
+      <span class="card-header">
+    	   <img class="img-circle" src='img/maikon.jpg'>
+      </span>
+     <ion-card-content>
+       <h2 class="card-title center-title">Maikon Igor da Silva Soares</h2>
+        <p>
+         Cientista da computação.<br/>
+         Esp. em desnvolvimento de aplicações Java.<br/>
+         Mestrando em Computação Aplicada.<br/>
+       </p>
+       </ion-card-content>
+       <ion-item>
+         <ion-icon name='mail' item-left></ion-icon>
+         maikonigor@gmail.com
+       </ion-item>
+       <ion-item>
+         <ion-icon name='logo-facebook' item-left style="color: #3b5998"></ion-icon>
+         maikonigor
+       </ion-item>
+       <ion-item>
+         <ion-icon name='logo-linkedin' item-left style="color: #0077b5"></ion-icon>
+         Maikon Igor
+       </ion-item>
+    </ion-card>
+</ion-content>
