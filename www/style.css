@@ -1,3 +1,23 @@
 .menu-item{
 	padding: 10px;
 }
+
+
+/* estilo da pagina sobre */
+.img-circle {
+    border-radius: 50%;
+		width: 100px;
+		height: auto;
+		text-align: center;
+}
+
+.card-header{
+	display: block;
+	margin-left: 35%;
+	margin-right: auto;
+}
+
+.center-title{
+		text-align: center;
+		font-weight: bold;
+}
