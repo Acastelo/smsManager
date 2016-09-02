@@ -17,13 +17,13 @@
     </ion-item>
 
     <ion-card-content>
-      <ion-textarea rows="10" placeholder="Escreva sua mensagem aqui...">
+      <ion-textarea rows="10" placeholder="Escreva sua mensagem aqui..." [(ngModel)]="men.mensagem">
       </ion-textarea>
     </ion-card-content>
   </ion-card>
   <ion-item>
     <ion-label>Data Agendamento</ion-label>
-    <ion-datetime displayFormat="DD/MM/YYYY" (ionChange)="mudarBotao()"></ion-datetime>
+    <ion-datetime displayFormat="DD/MM/YYYY" (ionChange)="mudarBotao()" [(ngModel)]="men.dataEnvio"></ion-datetime>
   </ion-item>
   <button full dark>{{labelEnviar}}</button>
 

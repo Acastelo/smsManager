@@ -6,6 +6,7 @@ import { Mensagem } from './pages/mensagens/mensagens';
 import { Sobre } from './pages/sobre/sobre';
 import { Contatos } from './pages/contatos/contatos';
 import { Agendamentos } from './pages/agendamentos/agendamentos';
+import { SmsManagerDB } from './util/database';
 
 
 
@@ -28,7 +29,6 @@ class MyApp {
       { title: 'Nova Mensagem', component: Mensagem, icon: 'chatboxes' },
       { title: 'Contatos', component: Contatos, icon: 'contacts'  },
       { title: 'Agendamentos', component: Agendamentos, icon: 'calendar'  },
-
       { title: 'Sobre', component: Sobre, icon: 'information-circle'  },
   ]
 
