@@ -2,19 +2,41 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SQLite } from 'ionic-native';
 
+import { Database } from '../../util/database';
+
 @Component({
   templateUrl: 'build/pages/mensagens/mensagens.html'
 })
 
 export class Mensagem {
+<<<<<<< HEAD
   public database: SQLite;
   // public men: Array<Object>;
+=======
+  labelEnviar:String;
+  dataAtual= new Date().toISOString();
+  banco = new Database();
+
+  mensagemData = {
+    mensagem: '',
+    dataAgendamento: Date
+  };
+>>>>>>> a02c3f8751d00e8fe262907c8237f4222b36338a
 
   public objMensagem:{
     mensagem: string;
     dataAgendamento: Date;
   }
+<<<<<<< HEAD
   public labelEnviar:String;
+=======
+
+  salvar(mensagemData){
+    let sql = 'INSERT INTO tb_mensagem(mensagem, dataAgend) values (?,?)';
+
+    this.banco.adicionar(sql, [mensagemData.mensagem, mensagemData.dataAgendamento])
+  }
+>>>>>>> a02c3f8751d00e8fe262907c8237f4222b36338a
 
   constructor(public navCtrl: NavController) {
     this.labelEnviar= "Enviar";

@@ -4,7 +4,7 @@ import { TabEnviadas } from '../tabs/TabEnvio';
 import { TabAgendadas } from '../tabs/TabAgenda';
 
 @Component({
-  templateUrl: 'build/pages/agendamentos/tabs.html' 
+  templateUrl: 'build/pages/agendamentos/tabs.html'
 })
 
 export class Agendamentos{
@@ -17,7 +17,3 @@ export class Agendamentos{
         this.tabAgendadas = TabAgendadas;
   }
 }
-
-
-
-
